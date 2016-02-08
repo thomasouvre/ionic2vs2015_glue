@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="ionic2vs2015_glue"
     version="1.0.0">
-    <name>Keyboard</name>
+    <name>ionic2 vs2015 glue</name>
     <description>Cordova hooks for Ionic2 build inside Visual Studio 2015</description>
     <license>Apache 2.0</license>
     <keywords>Ionic2 VS2015 hooks</keywords>
@@ -24,7 +24,7 @@
     <!-- windows -->
     <platform name="windows">
         <hook type="before_prepare" src="www/ionic2vs_glue_$_ionic_build.js" />
-        <hook type="after_compile" src="hooks/ionic2vs_glue_$_copy_appxrecipe.js" />
+        <hook type="after_compile" src="www/ionic2vs_glue_$_copy_appxrecipe.js" />
     </platform>
 
 </plugin>
