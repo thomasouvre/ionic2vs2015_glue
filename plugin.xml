@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="ionic2vs2015_glue"
+    version="1.0.0">
+    <name>Keyboard</name>
+    <description>Cordova hooks for Ionic2 build inside Visual Studio 2015</description>
+    <license>Apache 2.0</license>
+    <keywords>Ionic2 VS2015 hooks</keywords>
+    <repo>https://github.com/thomasouvre/ionic2vs2015_glue.git</repo>
+    <issue>https://github.com/thomasouvre/ionic2vs2015_glue/issues</issue>
+
+
+    <!-- android -->
+    <platform name="android">
+        <hook type="before_prepare" src="www/ionic2vs_glue_$_ionic_build.js" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <hook type="before_prepare" src="www/ionic2vs_glue_$_ionic_build.js" />
+    </platform>
+
+    <!-- windows -->
+    <platform name="windows">
+        <hook type="before_prepare" src="www/ionic2vs_glue_$_ionic_build.js" />
+        <hook type="after_compile" src="hooks/ionic2vs_glue_$_copy_appxrecipe.js" />
+    </platform>
+
+</plugin>
